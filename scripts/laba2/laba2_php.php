@@ -45,20 +45,21 @@ function makeBigLetters(&$arr){
 }
 
 function output(&$arr){
-    $color = 720371;
 
+    echo "<p>";
     for($i=0;$i<count($arr);$i++){
         for($j=0;$j<strlen($arr[$i]);$j++){
+            $temp = $arr[$i];
             if($j % 3==2){
-                echo "<p style=color: #$color >$arr[$i][$j]</p>";
+                echo "<span style=\"color:purple\" >$temp[$j]</span>";
 
             }else{
-                echo "<p>$arr[$i][$j]</p>";
+                echo "$temp[$j]";
             }
         }
         echo " ";
     }
-    echo "<br/>";
+    echo "</p><br/>";
 }
 
 ?>
